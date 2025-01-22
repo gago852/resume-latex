@@ -1,10 +1,8 @@
-name: Docker Image CI
+name: Generate PDF
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   compile:
@@ -20,7 +18,4 @@ jobs:
           options: -v ${{ github.workspace }}:/data
           run: |
             cd data
-            pdflatex sourabh_bajaj_resume.tex
-      - uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: Apply pdflatex changes
+            pdflatex gabriel_gomez_resume.tex

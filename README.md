@@ -8,19 +8,24 @@ Most currently available templates either focus on two columns, or are multiple 
 
 ### Quick start
 
-Get started quickly using [Overleaf](https://www.overleaf.com/latex/templates/software-engineer-resume/gqxmqsvsbdjf) template.
-
 ### Build using Docker
+
+Unix
 
 ```sh
 docker build -t latex .
-docker run --rm -i -v "$PWD":/data latex pdflatex sourabh_bajaj_resume.tex
+docker run --rm -i -v "$PWD":/data latex pdflatex gabriel_gomez_resume.tex
+```
+
+on powershell
+
+```sh
+docker build -t latex .
+docker run --rm -i -v "${PWD}:/data" latex pdflatex sourabh_bajaj_resume.tex
 ```
 
 ### Preview
 
-![Resume Screenshot](/resume_preview.png)
-
 ### License
 
-Format is MIT but all the data is owned by Sourabh Bajaj.
+Format is MIT but all the data is owned by Gabriel Gomez.
