@@ -15,9 +15,10 @@ RUN apt-get install --no-install-recommends -y git procps
 # Install Tex Live
 RUN apt-get update && apt-get -y upgrade \
     && apt-get -y install --no-install-recommends \
-    texlive-latex-base \
+    texlive-latex-recommended \
     texlive-extra-utils \
     texlive-latex-extra \
+    texlive-fonts-recommended \
     biber chktex latexmk make python3-pygments python3-pkg-resources \
     texlive-lang-chinese \
     texlive-lang-japanese
@@ -29,6 +30,10 @@ RUN curl -L http://cpanmin.us | perl - App::cpanminus \
     && cpanm YAML::Tiny \
     && cpanm File::HomeDir \
     && cpanm Unicode::GCString
+
+RUN apt-get install gnupg2 -y
+RUN apt-get install socat -y
+RUN echo "alias arbolito='git log --all --graph --decorate --oneline'" >> /etc/bash.bashrc
 
 # Clean up
 RUN apt-get autoremove -y \

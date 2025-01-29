@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-docker build -t sb2nov/latex .
-docker run --rm -i -v "$PWD":/data sb2nov/latex pdflatex gabriel_gomez_resume.tex
+docker build -t gago852/latex .
+docker run --rm -i -v "$PWD":/data gago852/latex pdflatex gabriel_gomez_resume.tex
