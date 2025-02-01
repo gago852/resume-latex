@@ -8,7 +8,7 @@ RUN apt-get update
 RUN apt-get install -qyf \
     curl jq make git \
     python3-pygments gnuplot \
-    texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
+    texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-lang-spanish
 RUN rm -rf /var/lib/apt/lists/*
 
 WORKDIR /data
