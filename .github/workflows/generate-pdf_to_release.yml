@@ -1,0 +1,81 @@
+name: Generate PDF
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build_en:
+    name: Compile resume pdf in English
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+      - name: Run the build process with Docker
+        uses: addnab/docker-run-action@v3
+        with:
+          image: thomasweise/docker-texlive-full:latest
+          options: -v ${{ github.workspace }}:/data
+          run: |
+            cd data
+            pdflatex gabriel_gomez_resume_en.tex
+      - name: Upload PDF (English)
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-en
+          path: gabriel_gomez_resume_en.pdf
+  build_es:
+    name: Compile resume pdf in Spanish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+      - name: Run the build process with Docker
+        uses: addnab/docker-run-action@v3
+        with:
+          image: thomasweise/docker-texlive-full:latest
+          options: -v ${{ github.workspace }}:/data
+          run: |
+            cd data
+            pdflatex gabriel_gomez_resume_es.tex
+      - name: Upload PDF (Spanish)
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-es
+          path: gabriel_gomez_resume_es.pdf
+
+  release:
+    name: Create GitHub Release
+    needs: [build_en, build_es]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+
+      - name: Download PDFs
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: List downloaded files
+        run: ls -R artifacts
+
+      - name: Check if PDFs exist before release
+        run: |
+          FILES=$(ls artifacts/*/*.pdf 2>/dev/null | wc -l)
+          if [ "$FILES" -eq "0" ]; then
+            echo "No PDFs found, skipping release."
+            exit 1
+          fi
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            artifacts/resume-en/gabriel_gomez_resume_en.pdf
+            artifacts/resume-es/gabriel_gomez_resume_es.pdf
+          tag_name: v1.0.${{ github.run_number }}
+          name: Resume Release v1.0.${{ github.run_number }}
+          body: 'This release contains the latest versions of the resume in English and Spanish.'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
