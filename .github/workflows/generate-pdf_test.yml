@@ -5,16 +5,48 @@ on:
     branches: [dev]
 
 jobs:
-  build_en:
-    name: Compile resume pdf in English
+  build_image:
+    name: Build and Cache Docker Image
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
         uses: actions/checkout@v4
+
+      - name: Cache Docker Layers
+        uses: actions/cache@v4
+        with:
+          path: /tmp/.docker-cache
+          key: docker-image-${{ hashFiles('Dockerfile') }}
+          restore-keys: |
+            docker-image-
+
+      - name: Build Docker Image
+        run: |
+          docker build -t latex-gago:latest -f Dockerfile .
+          mkdir -p /tmp/.docker-cache
+          docker save latex-gago:latest -o /tmp/.docker-cache/latex-gago.tar
+
+  build_en:
+    name: Compile resume pdf in English
+    needs: build_image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+
+      - name: Restore Cached Docker Image
+        uses: actions/cache@v4
+        with:
+          path: /tmp/.docker-cache
+          key: docker-image-${{ hashFiles('Dockerfile') }}
+
+      - name: Load Cached Docker Image
+        run: docker load -i /tmp/.docker-cache/latex-gago.tar || true
+
       - name: Run the build process with Docker
         uses: addnab/docker-run-action@v3
         with:
-          image: thomasweise/docker-texlive-full:latest
+          image: latex-gago:latest
           options: -v ${{ github.workspace }}:/data
           run: |
             cd data
@@ -30,10 +62,20 @@ jobs:
     steps:
       - name: Check out the repo
         uses: actions/checkout@v4
+
+      - name: Restore Cached Docker Image
+        uses: actions/cache@v4
+        with:
+          path: /tmp/.docker-cache
+          key: docker-image-${{ hashFiles('Dockerfile') }}
+
+      - name: Load Cached Docker Image
+        run: docker load -i /tmp/.docker-cache/latex-gago.tar || true
+
       - name: Run the build process with Docker
         uses: addnab/docker-run-action@v3
         with:
-          image: thomasweise/docker-texlive-full:latest
+          image: latex-gago:latest
           options: -v ${{ github.workspace }}:/data
           run: |
             cd data
