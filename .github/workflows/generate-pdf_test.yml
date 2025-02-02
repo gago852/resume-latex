@@ -1,7 +1,8 @@
 name: Generate PDF Test
 
 on:
-  workflow_dispatch:
+  push:
+    branches: [dev]
 
 jobs:
   build_en:
