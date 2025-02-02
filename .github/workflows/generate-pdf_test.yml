@@ -58,6 +58,7 @@ jobs:
           path: gabriel_gomez_resume_en.pdf
   build_es:
     name: Compile resume pdf in Spanish
+    needs: build_image
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
