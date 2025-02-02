@@ -22,7 +22,7 @@ jobs:
 
       - name: Build Docker Image
         run: |
-          if [ -f "/tmp/.docker-cache/my-latex-image.tar" ]; then
+          if [ -f "/tmp/.docker-cache/latex-gago.tar" ]; then
             echo "Cached image found, skipping build."
           else
             docker build -t latex-gago:latest -f Dockerfile .
