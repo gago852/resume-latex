@@ -6,7 +6,10 @@
       "extensions": [
         "james-yu.latex-workshop",
         "esbenp.prettier-vscode",
-        "github.vscode-github-actions"
+        "github.vscode-github-actions",
+        "streetsidesoftware.code-spell-checker",
+        "mechatroner.rainbow-csv",
+        "streetsidesoftware.code-spell-checker-spanish"
       ]
     }
   }

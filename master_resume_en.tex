@@ -1,0 +1,189 @@
+%-------------------------
+% Resume in LateX
+% Author : Gabriel Gomez
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\setlength{\footskip}{5pt}
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://gabogomez.dev/}{\Large Gabriel Gomez}} & Email: \href{mailto:ggomez.dev@outlook.com}{ggomez.dev@outlook.com}\\
+  \href{https://gabogomez.dev/}{gabogomez.dev} & Mobile: \href{tel:+573168325201}{+57-316-832-5201} \\
+\end{tabular*}
+
+
+
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Extreme Technologies S.A.}{Barranquilla, CO}
+{Software Developer}{Apr 2021 -- Jun 2024}
+\resumeItemListStart
+\resumeItem{Acuacar Daños}
+{Acuacar Daños is a cloud-based crew management system for utility companies, this system is tailored for damage control in the water network and for the water utility company Acuacar. It uses a web page for supervisors, built with Google Web Toolkit (GWT), and an Android app used for contractors to receive tasks, track the progress of the task using geo-location data (GPS) and report back to the system.}
+\resumeItem{Promigas}
+{Promigas is a cloud-based crew management system for utility companies, this system is tailored for inspections in the gas network and for the company Promigas. It uses a web page for supervisors, built with Google Web Toolkit (GWT), and an Android app used for contractors to receive tasks, track the progress of the task using geo-location data (GPS) and report back to the system, also has a feature to track the route that the contractor takes in real time while he is doing the inspection.}
+
+\resumeItem{Podas y Lavados}
+{Podas y Lavados is a cloud-based crew management system for electrical network maintenance and tree pruning, specially designed for Aire and Afinia. It uses a web page for supervisors built with Google Web Toolkit (GWT) and an Android app for contractors to receive tasks, track the progress of the task using geolocation data (GPS) and report back to the system. Another feature is the ability for the contractor to survey the trees that are not in the database, which have been imported from a Keyhole Markup Language (KMZ) file from Google Earth.}
+
+\resumeItem{SETP Santa Marta}
+{SETP Santa Marta is a cloud-based public bus transportation system for the city of Santa Marta. It uses several technologies including Amazon Lambdas, Digi Routers, and a ticket validator running on Android. Another feature is the integration of the police command and control center to track the buses in real time, the use of a panic button to call the police, and the use of virtual wallets to pay for the bus ticket with QR codes.}
+
+\resumeItemListEnd
+
+% --------Multiple Positions Heading------------
+%  \resumeSubSubheading
+%   {Software Engineer I}{Oct 2014 -- Sep 2016}
+%   \resumeItemListStart
+%      \resumeItem{Apache Beam}
+%        {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%   \resumeItemListEnd
+
+%-------------------------------------------
+
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Universidad Autónoma del Caribe}{Barranquilla, CO}
+{Bachelor of System Engineering}{Feb 2018 -- May 2023}
+\resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeSubItem{Weather App}
+{Open-source weather app for Android built with Kotlin and Jetpack Compose that provides real-time forecasts, location-based updates, and a modern, customizable UI using the OpenWeather API.}
+\resumeSubItem{Resume Builder on LateX}
+{Open source resume generator that uses LaTeX to create professional-looking PDFs, and utilizes GitHub Actions for automated building and deployment.}
+\resumeSubHeadingListEnd
+
+%-----------Courses and Certifications-----------------
+\section{Courses and Certifications}
+\resumeSubHeadingListStart
+\resumeSubItem{Universidad autónoma del caribe - New Engineering Trends}{04-02-2023}
+\resumeSubItem{Udemy - Jetpack Compose from scratch, migrate your Android XML views}{14-04-2024}
+\resumeSubItem{Udemy - Android Testing Course with JUnit, Mockito, Espresso and TDD}{24-02-2024}
+\resumeSubItem{Platzi - Git and GitHub Professional Course}{09-09-2019}
+\resumeSubItem{Platzi - AI Tools for Developers}{12-04-2025}
+\resumeSubItem{Platzi - Android UI Design with Android Studio}{08-07-2020}
+\resumeSubItem{Platzi - Flutter Course}{29-03-2021}
+\resumeSubItem{Platzi - Advanced Flutter Course}{25-04-2022}
+\resumeSubItem{Platzi - Introduction to Java SE}{19-10-2020}
+\resumeSubItem{Platzi - Object-Oriented Java SE}{15-02-2021}
+\resumeSubItem{Platzi - Basic Kotlin Course}{31-10-2019}
+\resumeSubItem{Platzi - Kotlin for Android Course}{24-05-2020}
+\resumeSubItem{Platzi - Terminal and Command Line Introduction Course}{27-04-2020}
+\resumeSubHeadingListEnd
+
+%--------SKILLS------------
+\section{Skills}
+\resumeSubHeadingListStart
+\item{
+            \textbf{Languages}{: Java, Kotlin, SQL, TypeScript, JavaScript, HTML, CSS, Dart, Python}
+            
+      }
+\item {
+            \textbf{Technologies}{: AWS, Android, React, Astro, Jetpack Compose, Flutter, PostgreSQL, MySQL, Firebase, Git, Docker, Kubernetes, Espresso, Mockito, JUnit, Test-Driven Development, Clean Architecture, SOLID, Design Patterns, RESTful APIs, Microservices, CI/CD, Agile, Scrum, Maven, Gradle, Jira}
+      }
+\resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
