@@ -1,0 +1,23 @@
+version: 2
+updates:
+  # Mantiene actualizadas las GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "03:30"
+      timezone: "UTC"
+    open-pull-requests-limit: 10
+    labels: ["dependencies", "github-actions"]
+
+  # Mantiene actualizado el Dockerfile (imágenes base y digests)
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "03:35"
+      timezone: "UTC"
+    open-pull-requests-limit: 10
+    labels: ["dependencies", "docker"]
