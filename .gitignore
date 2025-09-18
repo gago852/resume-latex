@@ -17,6 +17,8 @@ Archieve/
 *.gz
 *.fdb_latexmk
 
+temp*.tex
+
 # github action result
 semicolon_delimited_script
 
