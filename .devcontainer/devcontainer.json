@@ -9,7 +9,8 @@
         "github.vscode-github-actions",
         "streetsidesoftware.code-spell-checker",
         "mechatroner.rainbow-csv",
-        "streetsidesoftware.code-spell-checker-spanish"
+        "streetsidesoftware.code-spell-checker-spanish",
+        "mutantdino.resourcemonitor"
       ]
     }
   }
