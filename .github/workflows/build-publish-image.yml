@@ -2,6 +2,9 @@ name: Build and Publish Docker Image
 
 on:
   push:
+    branches:
+      - master
+      - dev
     paths:
       - Dockerfile
   workflow_dispatch: {}
@@ -36,7 +39,7 @@ jobs:
         with:
           images: ghcr.io/${{ github.repository_owner }}/resume-latex
           tags: |
-            type=raw,value=latest
+            type=raw,value=${{ github.ref == 'refs/heads/master' && 'latest' || 'beta' }}
             type=sha,prefix=sha-
           labels: |
             org.opencontainers.image.title=Resume LaTeX Builder
@@ -58,7 +61,7 @@ jobs:
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           push: true
           tags: |
-            ghcr.io/${{ github.repository_owner }}/resume-latex:latest
+            ghcr.io/${{ github.repository_owner }}/resume-latex:${{ github.ref == 'refs/heads/master' && 'latest' || 'beta' }}
             ghcr.io/${{ github.repository_owner }}/resume-latex:sha-${{ github.sha }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
