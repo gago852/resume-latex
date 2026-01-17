@@ -3,6 +3,10 @@ name: Generate PDF
 on:
   push:
     branches: [master]
+    paths:
+      - gabriel_gomez_resume_en.tex
+      - gabriel_gomez_resume_es.tex
+  workflow_dispatch: {}
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -100,6 +104,6 @@ jobs:
             artifacts/resume-es/gabriel_gomez_resume_es.pdf
           tag_name: v1.0.${{ github.run_number }}
           name: Resume Release v1.0.${{ github.run_number }}
-          body: 'This release contains the latest versions of the resume in English and Spanish.'
+          body: "This release contains the latest versions of the resume in English and Spanish."
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

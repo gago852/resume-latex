@@ -3,6 +3,10 @@ name: Generate PDF Test
 on:
   push:
     branches: [dev]
+    paths:
+      - gabriel_gomez_resume_en.tex
+      - gabriel_gomez_resume_es.tex
+  workflow_dispatch: {}
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
