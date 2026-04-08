@@ -23,3 +23,5 @@ temp*.tex
 semicolon_delimited_script
 
 *.pdf
+
+settings.local.json
