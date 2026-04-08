@@ -111,18 +111,25 @@
 \resumeSubHeadingListStart
 
 \resumeSubheading
+{Autónomo}{Barranquilla, CO}
+{Desarrollador de Software Freelance}{Jun 2025 -- Presente}
+\resumeItemListStart
+\resumeItem{Migración de Web Service}
+{Migré un web service de Java EE a Spring Boot e implementé Kubernetes para la orquestación de contenedores. Construí un entorno de desarrollo automatizado usando un Makefile para simplificar flujos de trabajo, incluyendo levantar un stack de Docker Compose con una base de datos de pruebas, construir imágenes de contenedor, correr el proyecto con variables de entorno e inicializar archivos de configuración.}
+\resumeItemListEnd
+
+\resumeSubheading
 {Extreme Technologies S.A.}{Barranquilla, CO}
 {Desarrollador de Software}{Abr 2021 -- Jun 2024}
 \resumeItemListStart
 \resumeItem{Acuacar Daños}
-{Acuacar Daños es un sistema de gestión de cuadrillas basado en la nube para empresas de servicios públicos, este sistema está hecho a medida para el control de daños en la red de agua y para la empresa de servicios públicos de agua Acuacar. Utiliza una página web para los supervisores, construida con Google Web Toolkit (GWT), y una aplicación Android utilizada por los contratistas para recibir tareas, realizar un seguimiento del progreso de la tarea utilizando datos de geolocalización (GPS) e informar al sistema.}
+{Mantuve y desarrollé features para la app Android y el web service Jakarta de un sistema de gestión de cuadrillas en la nube para la empresa de acueducto Acuacar. Rediseñé la interfaz gráfica completa para una apariencia moderna, migré la app para soportar Android 11 e implementé una modificación al flujo de trabajo que abarcó tanto la app móvil como el web service.}
 \resumeItem{Promigas}
-{Promigas es un sistema de gestión de cuadrillas basado en la nube para empresas de servicios públicos, este sistema está hecho a medida para las inspecciones en la red de gas y para la empresa Promigas. Utiliza una página web para los supervisores, construida con Google Web Toolkit (GWT), y una aplicación para Android que se utiliza para que los contratistas reciban tareas, sigan el progreso de la tarea utilizando datos de geolocalización (GPS) e informen al sistema, también tiene una función para realizar un seguimiento de la ruta que sigue el contratista en tiempo real mientras realiza la inspección.}
+{Adapté un sistema white-label de gestión de cuadrillas para un nuevo cliente de gas, desarrollando la app Android y el web service Jakarta. Implementé rastreo GPS en tiempo real para mapear las rutas de los contratistas durante inspecciones de gasoductos, integré PostGIS para el procesamiento de coordenadas geográficas y optimicé el web service para manejar la carga incrementada por sesiones concurrentes en tiempo real.}
 \resumeItem{Podas y Lavados}
-{Podas y Lavados es un sistema de gestión de cuadrillas basado en la nube para el mantenimiento de redes eléctricas y la poda de árboles, especialmente diseñado para Aire y Afinia. Utiliza una página web para los supervisores construida con Google Web Toolkit (GWT) y una aplicación Android para que los contratistas reciban tareas, sigan el progreso de la tarea utilizando datos de geolocalización (GPS) e informen al sistema. Otra función es la posibilidad de que el contratista catalogue los árboles que no están en la base de datos, que se han importado desde un archivo Keyhole Markup Language (KMZ) de Google Earth.}
-
+{Adapté un sistema white-label para mantenimiento de redes eléctricas y poda de árboles sirviendo a Aire y Afinia. Construí una app Android multirol con soporte para dos flujos de trabajo paralelos e implementé un feature GIS que descarga y renderiza capas en el mapa con las posiciones y estados de árboles y postes eléctricos desde el web service.}
 \resumeItem{SETP Santa Marta}
-{SETP Santa Marta es un sistema de transporte público en autobús basado en la nube para la ciudad de Santa Marta. Utiliza varias tecnologías, como Amazon Lambdas, Digi Routers y un validador de pasajes que funciona con Android. Otra característica es la integración con el centro de mando y control de la policía para realizar un seguimiento de los autobuses en tiempo real, el uso de un botón de pánico para llamar a la policía y el uso de monederos virtuales para pagar el billete de autobús con códigos QR.}
+{Implementé una capa middleware en un validador de pasajes basado en Android para un sistema de transporte público. Construí la validación de pagos para tarjetas físicas y códigos QR de billeteras virtuales, y diseñé una cola offline-first para almacenar transacciones durante pérdidas de conexión y sincronizarlas al restaurar la conectividad.}
 
 \resumeItemListEnd
 
@@ -154,18 +161,32 @@
 {Aplicación meteorológica de código abierto para Android creada con Kotlin y Jetpack Compose que ofrece previsiones en tiempo real, actualizaciones basadas en la ubicación y una interfaz de usuario moderna y personalizable mediante la API OpenWeather.}
 \resumeSubItem{Resume Builder on LateX}
 {Un generador de currículos de código abierto que utiliza LaTeX para crear PDF de aspecto profesional y utiliza GitHub Actions para la creación y el despliegue automatizados.}
+\resumeSubItem{Portfolio Personal}
+{Portfolio web personal construido con Astro y Tailwind CSS, desplegado en Cloudflare. Implementa Edge Functions de Cloudflare para la redirección automática basada en el idioma del navegador, ofreciendo una experiencia multilingüe optimizada y de alto rendimiento.}
+\resumeSubItem{MatricuApp}
+{Solución a prueba técnica — una webapp de matrícula universitaria donde los estudiantes pueden iniciar sesión, matricular y retirar materias de su semestre correspondiente, con límite de créditos por semestre. Frontend construido con React y backend con Spring Boot, Maven, JPA, autenticación JWT con Spring Security y base de datos PostgreSQL en Neon.}
 \resumeSubHeadingListEnd
 
+%-----------Cursos y Certificaciones-----------------
+\section{Cursos y Certificaciones}
+\resumeSubHeadingListStart
+\resumeSubItem{Udemy - Curso de React: de cero a experto}{Mar 2026}
+\resumeSubItem{Udemy - Jetpack Compose desde cero, migra tus vistas de Android XML}{Abr 2024}
+\resumeSubItem{Udemy - Curso Testing para Android con JUnit, Mockito, Espresso y TDD}{Feb 2024}
+\resumeSubItem{Platzi - Curso Avanzado de Flutter}{Abr 2022}
+\resumeSubItem{Platzi - Java SE Orientado a Objetos}{Feb 2021}
+\resumeSubItem{Platzi - Curso de Kotlin para Android}{May 2020}
+\resumeSubHeadingListEnd
 
 %--------SKILLS------------
 \section{Skills}
 \resumeSubHeadingListStart
 \item{
-            \textbf{Lenguajes}{: Java, Kotlin, SQL, TypeScript, JavaScript, HTML, CSS, Dart, Python}
+            \textbf{Lenguajes}{: Java, Kotlin, SQL, TypeScript, JavaScript, HTML, CSS, Dart, Python, LaTeX}
 
       }
 \item {
-            \textbf{Tecnologías}{: AWS, Android, React, Astro, Jetpack Compose, Flutter, PostgreSQL, MySQL, Firebase, Git, Docker, Kubernetes, Espresso, Mockito, JUnit, Test-Driven Development, Clean Architecture, SOLID, Design Patterns, RESTful APIs, Microservices, CI/CD, Agile, Scrum, Maven, Gradle, Jira}
+            \textbf{Tecnologías}{: AWS, Android, Astro, React, Tailwind CSS, Cloudflare Edge Functions, Google Web Toolkit (GWT), Jetpack Compose, Flutter, Spring Boot, Kubernetes, Docker, Docker Compose, PostgreSQL, MySQL, Firebase, Git, GitHub Actions, Espresso, Mockito, JUnit, Test-Driven Development, Clean Architecture, SOLID, Design Patterns, RESTful APIs, Microservices, CI/CD, Agile, Scrum, Maven, Gradle, Make, Jira}
       }
 \resumeSubHeadingListEnd
 
