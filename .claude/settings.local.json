@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__deepl__translate-text",
+      "Bash(./build.sh:*)"
+    ]
+  }
+}
