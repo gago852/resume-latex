@@ -1,0 +1,82 @@
+%-------------------------
+% Cover Letter in LaTeX
+% Author : Gabriel Gomez
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{cmap}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usepackage[empty]{fullpage}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\setlength{\footskip}{5pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.8em}
+
+\pdfgentounicode=1
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://gabogomez.dev/}{\Large Gabriel Gomez}} & Email: \href{mailto:ggomez.dev@outlook.com}{ggomez.dev@outlook.com} \\
+  \href{https://gabogomez.dev/}{gabogomez.dev} & Mobile: \href{tel:+573168325201}{+57-316-832-5201} \\
+\end{tabular*}
+
+\vspace{1.2em}
+
+June 13, 2026
+
+\vspace{0.4em}
+
+Sezzle Hiring Team
+
+\vspace{1em}
+
+Dear Sezzle Hiring Team,
+
+I am applying for the Junior Software Engineer role at Sezzle. Two things drew me here equally: a mission I believe in --- making commerce more financially accessible --- and an engineering environment built around scale, automation, and high standards. That combination is exactly what I am looking for.
+
+My background is full-stack with a backend lean. I have built RESTful APIs on Spring Boot and Jakarta EE, worked with relational databases (PostgreSQL, MySQL), and deployed containerized services on Kubernetes running on AWS. On the frontend, I have built SPAs with React and TypeScript --- including MatricuApp, a course enrollment platform with JWT authentication, role-based access control, and a PostgreSQL backend. More recently, I developed a production POS system using NestJS and Electron with an offline-first SQLite architecture, automated unit and integration tests, and full audit trails for inventory reconciliation.
+
+I will be straightforward: I have not written Golang yet. But I learn fast, and I have a habit of proving it in practice rather than on paper. My roots are in Java, so when I took on the POS project I had to adopt NestJS and Electron --- a meaningful paradigm shift from a Java EE backend to an event-driven Node.js runtime with a completely different async model. I found it more interesting than intimidating. Golang's philosophy --- simplicity, explicit error handling, performance --- maps closely to how I already think about building reliable backends. I am confident I will be productive in it quickly, and I am genuinely excited to do it inside a production-scale system.
+
+The fintech angle resonates with me personally. As a freelance contractor for Extreme Technologies I built Afinia PQR, a platform for managing customer complaints and claims for an electric utility. I adapted an existing white-label Android and Jakarta web service system to support a three-role workflow: an administrator creates a case and assigns it to a contractor crew, the contractor submits a field report marking the job resolved or flagged for follow-up, and a supervisor reviews the outcome before closing the case. I implemented the state machine driving case transitions and role-based form routing across mobile app and backend --- a system where traceability is non-negotiable because every PQR carries a regulatory deadline. That experience gave me a strong appreciation for the correctness-under-pressure engineering that financial products demand.
+
+On the AI tools requirement: I use Claude daily --- for research, generating boilerplate, stress-testing logic, and speeding up documentation. I treat it as a multiplier, not a replacement for understanding, and I am comfortable being evaluated on how I use it.
+
+I would welcome the chance to demonstrate what I can contribute to Sezzle.
+
+\vspace{1.5em}
+
+Sincerely,
+
+\vspace{0.4em}
+
+\textbf{Gabriel Gomez}\\
+\href{mailto:ggomez.dev@outlook.com}{ggomez.dev@outlook.com}
+
+\end{document}
