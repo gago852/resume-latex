@@ -1,0 +1,180 @@
+%-------------------------
+% Resume in LateX
+% Author : Gabriel Gomez
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{cmap}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[spanish]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\setlength{\footskip}{5pt}
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://gabogomez.dev/}{\Large Gabriel Gomez}} & Correo electrónico: \href{mailto:ggomez.dev@outlook.com}{ggomez.dev@outlook.com}\\
+  \href{https://gabogomez.dev/}{gabogomez.dev} & Movil: \href{tel:+573168325201}{+57-316-832-5201} \\
+\end{tabular*}
+
+
+%-----------EXPERIENCE-----------------
+\section{Experiencia}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Autónomo}{Barranquilla, CO}
+{Desarrollador de Software Fullstack Freelance}{Jun 2025 -- Presente}
+\resumeItemListStart
+\resumeItem{Migración de Web Service}
+{Migré un web service de Java EE a Spring Boot, diseñando APIs RESTful e implementando Kubernetes para la orquestación de contenedores. Automaticé el entorno de desarrollo con un Makefile que levanta un stack de Docker Compose con base de datos de pruebas, construye imágenes y gestiona variables de entorno.}
+\resumeItem{Sistema POS}
+{Desarrollé un sistema POS fullstack con Electron y NestJS (TypeScript) para un cliente de retail. Diseñé la API REST del backend, implementé almacenamiento SQLite offline-first, impresión térmica por USB y gestión de inventario con auditorías para reducir discrepancias de stock.}
+\resumeItem{Afinia PQR}
+{Adapté un sistema white-label de gestión de cuadrillas para el proceso de PQR de la empresa eléctrica Afinia. Construí el web service Jakarta con APIs REST soportando tres roles (administrador, contratista, supervisor) e implementé la máquina de estados que gestiona las transiciones del caso entre el backend y la app móvil.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Extreme Technologies S.A.}{Barranquilla, CO}
+{Desarrollador de Software}{Abr 2021 -- Jun 2024}
+\resumeItemListStart
+\resumeItem{Promigas}
+{Desarrollé la app Android y el web service Jakarta con APIs REST para un sistema de gestión de cuadrillas de gas. Implementé rastreo GPS en tiempo real, integré PostGIS para el procesamiento de coordenadas geográficas en PostgreSQL y optimicé el backend para manejar sesiones concurrentes.}
+\resumeItem{Acuacar Daños}
+{Mantuve y desarrollé features para el web service Jakarta y la app Android de un sistema de gestión de cuadrillas en la nube. Implementé modificaciones al flujo de trabajo que abarcaron las APIs del backend y la capa de presentación.}
+
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Educación}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Universidad Autónoma del Caribe}{Barranquilla, CO}
+{Pregrado en Ingeniería de sistemas}{Feb 2018 -- May 2023}
+\resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Proyectos}
+\resumeSubHeadingListStart
+\resumeSubItem{MatricuApp}
+{Webapp fullstack de matrícula universitaria donde los estudiantes pueden iniciar sesión, matricular y retirar materias con límite de créditos por semestre. Frontend construido con React y TypeScript, backend con Spring Boot, Maven, JPA, autenticación JWT con Spring Security y base de datos PostgreSQL en Neon.}
+\resumeSubItem{Portfolio Personal}
+{Portfolio web personal construido con Astro y Tailwind CSS, desplegado en Cloudflare. Implementa Edge Functions de Cloudflare para la redirección automática basada en el idioma del navegador, ofreciendo una experiencia multilingüe optimizada y de alto rendimiento.}
+\resumeSubItem{Resume Builder on LateX}
+{Un generador de currículos de código abierto que utiliza LaTeX para crear PDF de aspecto profesional y utiliza GitHub Actions para la creación y el despliegue automatizados.}
+\resumeSubHeadingListEnd
+
+%-----------Cursos y Certificaciones-----------------
+\section{Cursos y Certificaciones}
+\resumeSubHeadingListStart
+\resumeSubItem{Udemy - Curso de React: de cero a experto}{Mar 2026}
+\resumeSubItem{Platzi - Herramientas de AI para Developers}{Abr 2025}
+\resumeSubItem{Universidad autónoma del caribe - Nuevas Tendencias de ingeniería}{Feb 2023}
+\resumeSubItem{Platzi - Java SE Orientado a Objetos}{Feb 2021}
+\resumeSubItem{Platzi - Introducción a Java SE}{Oct 2020}
+\resumeSubItem{Platzi - Curso Profesional de Git y GitHub}{Sep 2019}
+\resumeSubHeadingListEnd
+
+%--------SKILLS------------
+\section{Skills}
+\resumeSubHeadingListStart
+\item{
+            \textbf{Lenguajes}{: Java, TypeScript, JavaScript, SQL, Kotlin, HTML, CSS, Dart, Python, LaTeX}
+
+      }
+\item {
+            \textbf{Tecnologías}{: Spring Boot, PostgreSQL, Docker, Kubernetes, RESTful APIs, React, NestJS, Git, GitHub Actions, Maven, Gradle, CI/CD, Clean Architecture, SOLID, Design Patterns, Microservices, AWS, Astro, Tailwind CSS, Cloudflare Edge Functions, Android, Jetpack Compose, Flutter, SQLite, MySQL, Firebase, Docker Compose, Electron, Espresso, Mockito, JUnit, Test-Driven Development, Agile, Scrum, Make, Jira}
+      }
+\resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}

@@ -1,0 +1,190 @@
+%-------------------------
+% Resume in LateX
+% Author : Gabriel Gomez
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{cmap}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\setlength{\footskip}{5pt}
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://gabogomez.dev/}{\Large Gabriel Gomez}} & Email: \href{mailto:ggomez.dev@outlook.com}{ggomez.dev@outlook.com}\\
+  \href{https://gabogomez.dev/}{gabogomez.dev} & Mobile: \href{tel:+573168325201}{+57-316-832-5201} \\
+\end{tabular*}
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Extreme Technologies S.A.}{Barranquilla, CO}
+{Android Developer}{Apr 2021 -- Jun 2024}
+\resumeItemListStart
+\resumeItem{SETP Santa Marta}
+{Implemented a middleware layer in an Android-based fare validator for a public transit payment system. Built payment validation for physical NFC cards and QR codes from virtual wallets, and designed an offline-first transaction queue that syncs with the backend when connectivity is restored — ensuring zero payment loss under intermittent network conditions.}
+\resumeItem{Promigas}
+{Adapted a white-label crew management Android app for a gas utility client. Implemented real-time GPS tracking to map contractor routes during pipeline inspections, integrated RESTful APIs with the Jakarta web service, and integrated PostGIS for geographic coordinate processing. Optimized the backend to handle increased concurrent real-time sessions.}
+\resumeItem{Podas y Lavados}
+{Developed a multi-role Android app supporting parallel field workflows for power grid maintenance serving Aire and Afinia utilities. Implemented a GIS feature that downloads and renders map layers with tree and power pole positions and statuses fetched from the web service API.}
+\resumeItem{Acuacar Daños}
+{Maintained and developed features for the Android app of a cloud-based crew management system. Redesigned the complete UI applying Material Design principles, migrated the app to target Android 11 (API 30), and implemented workflow modifications spanning both the mobile app and backend service.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Self-employed}{Barranquilla, CO}
+{Freelance Android \& Backend Developer}{Jun 2024 -- Present}
+\resumeItemListStart
+\resumeItem{Afinia PQR}
+{Adapted a crew management system for Afinia's customer complaints and claims process as a freelance contractor. Built the Android app and Jakarta web service supporting a three-role workflow: administrators create and assign cases, contractors submit field reports, and supervisors review outcomes before closing cases. Implemented the state machine driving case transitions and role-based form routing.}
+\resumeItem{Web Service Migration}
+{Migrated a web service from Java EE to Spring Boot and containerized the application with Docker and Kubernetes. Built an automated local development environment via Makefile to streamline Docker Compose stack setup, image builds, and environment configuration.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Universidad Autónoma del Caribe}{Barranquilla, CO}
+{Bachelor of System Engineering}{Feb 2018 -- May 2023}
+\resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeSubItem{Weather App}
+{Open-source Android weather app built with Kotlin and Jetpack Compose providing real-time forecasts, location-based updates, and a modern UI using the OpenWeather REST API.}
+\resumeSubItem{MatricuApp}
+{University course enrollment webapp — built the frontend with React and the backend with Spring Boot, JWT authentication via Spring Security, JPA, and a PostgreSQL database.}
+\resumeSubItem{Personal Portfolio}
+{Personal web portfolio built with Astro and Tailwind CSS, deployed on Cloudflare with Edge Functions for automatic language-based redirection.}
+\resumeSubHeadingListEnd
+
+%-----------Courses and Certifications-----------------
+\section{Courses and Certifications}
+\resumeSubHeadingListStart
+\resumeSubItem{Udemy - React: From Zero to Expert}{Mar 2026}
+\resumeSubItem{Platzi - AI Tools for Developers}{Apr 2025}
+\resumeSubItem{Udemy - Jetpack Compose from scratch, migrate your Android XML views}{Apr 2024}
+\resumeSubItem{Udemy - Android Testing Course with JUnit, Mockito, Espresso and TDD}{Feb 2024}
+\resumeSubItem{Platzi - Advanced Flutter Course}{Apr 2022}
+\resumeSubItem{Platzi - Kotlin for Android Course}{May 2020}
+\resumeSubItem{Platzi - Android UI Design with Android Studio}{Jul 2020}
+\resumeSubItem{Platzi - Android Technical Basics Course}{Nov 2019}
+\resumeSubItem{Platzi - Basic Kotlin Course}{Oct 2019}
+\resumeSubItem{Platzi - Git and GitHub Professional Course}{Sep 2019}
+\resumeSubHeadingListEnd
+
+%--------SKILLS------------
+\section{Skills}
+\resumeSubHeadingListStart
+\item{
+      \textbf{Languages}{: Kotlin, Java, TypeScript, JavaScript, SQL, Dart, Python, HTML, CSS, LaTeX}
+      }
+\item{
+      \textbf{Android}{: Jetpack Compose, Android Architecture Components, Material Design, Jetpack (Room, Navigation, ViewModel, LiveData), Espresso, Mockito, JUnit, TDD}
+      }
+\item{
+      \textbf{Backend \& Infrastructure}{: Spring Boot, Jakarta EE, NestJS, RESTful APIs, PostgreSQL, SQLite, MySQL, Docker, Kubernetes, GitHub Actions, CI/CD, Firebase}
+      }
+\item{
+      \textbf{Practices}{: Clean Architecture, SOLID, Design Patterns, Agile, Scrum, Microservices, Gradle, Maven, Git, Jira}
+      }
+\resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
